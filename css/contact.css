@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(182, 14%, 61%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+}
+
+.contact,
+.contact__wrapper,
+.contact__form {
+  display: flex;
+}
+
+.contact,
+.contact__form {
+  flex-direction: column;
+}
+
+.contact {
+  color: hsl(29, 18%, 59%);
+  width: 90%;
+  max-width: 1100px;
+  background-color: hsl(57, 49%, 91%);
+  padding: 1.5em;
+}
+
+.contact__title {
+  text-align: center;
+  width: 100%;
+  padding-block: 1.375em;
+}
+
+.contact__desc,
+.contact__form {
+  width: 50%;
+  padding: 1.75em;
+}
+
+.contact__seperator {
+  background-color: hsl(29, 18%, 59%);
+}
+
+.contact__form {
+  gap: 1em;
+}
+
+.contact__input {
+  padding: 0.625em;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.0625em solid hsl(29, 18%, 59%);
+}
+
+textarea.contact__input {
+  resize: none;
+}
