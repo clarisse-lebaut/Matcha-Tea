@@ -17,9 +17,9 @@
           </p>
           <hr class="contact__seperator" />
           <form class="contact__form" action="#" method="post">
-            <label class="contact__label" for="txtName"
-              >Enter Your Name *</label
-            >
+            <label class="contact__label" for="txtName">
+              Enter Your Name *
+            </label>
             <input
               class="contact__input"
               type="text"
@@ -35,6 +35,12 @@
               id="txtEmail"
               placeholder="Email"
             />
+            <label class="contact_label" for="sltCivility">Civilité *</label>
+            <select class="contact__input">
+              <option value="mister">Monsieur</option>
+              <option value="miss">Madame</option>
+              <option value="other">Autre</option>
+            </select>
             <label class="contact__label" for="tareaMessage">
               Enter Your Message *
             </label>
@@ -46,7 +52,7 @@
               placeholder="Message"
             >
             </textarea>
-            <input class="contact__btn-submit" type="submit" value="Submit" />
+            <input class="contact__btn" type="submit" value="Submit" />
           </form>
         </div>
       </section>
