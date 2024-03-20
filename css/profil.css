@@ -1,0 +1,392 @@
+/* --- éléments commun à tous les formats --- */
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h3{
+    text-align: center;
+}
+
+/* --- version téléphone --- */
+@media screen and (max-width : 425px){
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .category {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #navpage{
+        display: none;
+    }
+
+    #for_mobil{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap : 50px;
+        list-style: none;
+        margin-bottom: 20px;
+        background-color:rgba(118, 231, 131, 0.715);
+        padding : 5px 0 5px 0;
+    }
+
+    #logo{
+        width: 30px;
+        height: 30px;
+    }
+
+    #logo:hover{
+        background-color: rgb(7, 134, 45);
+        border-radius: 20px;
+        padding : 5px 5px 5px 5px;
+        box-shadow: 0 0px 2px 2px gray;
+    }
+    
+    .general_info,
+    .password,
+    .contact_details {
+        background-color: rgb(118, 231, 131);
+        box-shadow: 0px 0px 2px 1px gray;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 200px;
+        height: 35px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+
+    input {
+        height: 20px;
+        width: 400px;
+        max-width: 200px;
+        background-color: rgb(234, 223, 207);
+        border-color: rgba(128, 128, 128, 0.733);
+        font-size: 15px;
+    }
+
+    .payment {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .credit {
+        margin: 10px 20px 10px 20px;
+        width: 50px;
+        height: 50px
+    }
+
+}
+
+/* --- version tablette --- */
+@media screen and (min-width : 426px) and (max-width : 1070px) {
+    .title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    li {
+        padding: 20px 20px 20px 20px;
+    }
+
+    #for_mobil{
+        display:none;
+    }
+
+    #navpage {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 5%;
+        padding: 10px 10px 10px 10px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: rgb(118, 231, 131);;
+    }
+
+    nav a {
+        text-decoration-line: none;
+            color: black;
+            position: relative;
+        padding: 0px 15px 0px 15px;
+        z-index:+1;
+    }
+
+    #hoover1::before,
+    #hoover2::before,
+    #hoover3::before{
+        content:'';
+        position : absolute;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background: rgb(11, 101, 10);
+        z-index: -1;
+        transition: .2s all;
+    }
+
+        #hoover1:hover::before,
+        #hoover2:hover::before,
+        #hoover3:hover::before{
+            width: 100%;   
+            box-shadow: 0px 0px 2px 1px rgb(20, 101, 10);
+        }
+
+        #hoover1:hover,
+        #hoover2:hover,
+        #hoover3:hover{
+            color: white;
+        }
+    .category {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .profil {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .general_info,
+    .password,
+    .contact_details {
+        background-color: rgb(118, 231, 131);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 10px 10px 10px;
+        padding-bottom: 10px;
+        gap: 10px;
+        width: 70%;
+        border-radius: 20px;
+        box-shadow: 0px 0px 2px 1px gray;
+    }
+
+    .general_info p,
+    .password p,
+    .contact_details p {
+        font-size: 20px;
+        text-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .general_info label,
+    .password label,
+    .contact_details label {
+        font-size: 20px;
+        padding-top: 15px;
+        padding-bottom: 3px;
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+        max-width: 200px;
+        height: 40px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+
+    input {
+        height: 40px;
+        width: 100%;
+        max-width: 400px;
+        background-color: rgb(234, 223, 207);
+        border-color: rgba(128, 128, 128, 0.733);
+        font-size: 15px;
+    }
+
+    .payment {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .credit {
+        margin: 10px 20px 10px 20px;
+        width: 50px;
+        height: 50px
+    }
+
+}
+
+/* --- version ordinateur --- */
+@media screen and (min-width : 1070px){
+        .title {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .page_profil {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        #navpage {
+            background-color: rgb(118, 231, 131);
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 20%;
+            padding: 30px 30px 30px 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #for_mobil{
+            display: none;
+        }
+    
+        nav a {
+            text-decoration-line: none;
+            color: black;
+            position: relative;
+            padding: 0px 15px 0px 15px;
+            z-index:+1;
+        }
+
+        #hoover1::before,
+        #hoover2::before,
+        #hoover3::before{
+            content:'';
+            position : absolute;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background: rgb(11, 101, 10);
+            z-index: -1;
+            transition: .2s all;
+        }
+
+        #hoover1:hover::before,
+        #hoover2:hover::before,
+        #hoover3:hover::before{
+            width: 100%;   
+            box-shadow: 0px 0px 2px 1px rgb(20, 101, 10);
+        }
+
+        #hoover1:hover,
+        #hoover2:hover,
+        #hoover3:hover{
+            color: white;
+        }
+      
+        .category {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    
+        .profil {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    
+        .general_info,
+        .password,
+        .contact_details {
+            background-color: rgb(118, 231, 131);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px 10px 10px 10px;
+            padding-bottom: 10px;
+            gap: 10px;
+            width: 70%;
+            border-radius: 20px;
+            box-shadow: 0px 0px 2px 1px gray;
+        }
+    
+        .general_info p,
+        .password p,
+        .contact_details p {
+            font-size: 20px;
+            text-align: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    
+        .general_info label,
+        .password label,
+        .contact_details label {
+            font-size: 20px;
+            padding-top: 15px;
+            padding-bottom: 3px;
+            text-align: center;
+        }
+    
+        button {
+            width: 100%;
+            max-width: 200px;
+            height: 40px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+    
+        input {
+            height: 40px;
+            width: 100%;
+            max-width: 400px;
+            background-color: rgb(234, 223, 207);
+            border-color: rgba(128, 128, 128, 0.733);
+            font-size: 15px;
+        }
+    
+        .payment {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    
+        .credit {
+            margin: 10px 20px 10px 20px;
+            width: 50px;
+            height: 50px
+        }
+
+}
