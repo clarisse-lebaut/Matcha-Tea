@@ -1,0 +1,185 @@
+/* --- instructions communes à tous les formats --- */
+
+
+/* --- version mobile --- */
+@media screen and (max-width : 425px){} 
+
+/* --- version tablette --- */
+@media screen and (min-width : 426px) and (max-width : 1070px){}
+
+/* --- version laptop --- */
+@media screen and (min-width : 1070px){}
+
+/* --- CORPS DE LA PAGE "MES COMMANDES" --- */
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+}
+
+/* --- rechercher un prduit dans une commande / recherhcer une commande */
+.search_command {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding:10px 0px 10px 0px;
+    background-color: rgba(118, 231, 131, 0.715);
+}
+
+.search_select,
+.search_input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding : 0px 100px 0px 100px;
+}
+
+.search_input{
+    gap:5px;
+} 
+
+.search_select{
+    gap:20px;
+}
+
+button, 
+input,
+select{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#site_search{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* --- APERCU DES COMMANDES PASSEE --- */
+/* --- contenaire principale qui comporte toutes les étiquettes de commandes--- */
+.command{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- contenaire du récapitulatif de toutes les commandes passée --- */
+.command_detail{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+
+    background-color: rgb(234, 234, 234);
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 3px gray;
+}
+
+/* ----- DETAILS DES COMMANDES ----- */
+/* --- contenaire du texte des commandes passée --- */
+.top_part_left {
+    display: flex;
+    border-radius: 20px;
+    background-color: rgba(118, 231, 131, 0.715);
+}
+
+/* --- contenaire des images des commaandes --- */
+.command_picture{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+.pictures{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    object-fit: cover;
+}
+
+.picture{
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+/* -- contenaire des zones paragraphé -- */
+.top_part_right{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+/* - texte - */
+.body_command,
+.text_command{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.text_command{
+    flex-direction: column;
+}
+
+.text_command h2,
+.text_command p{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#download {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* --- contenaire du suivie de commande --- */
+.bottom_part_left, 
+.bottom_part_right{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: rgba(218, 231, 118, 0.715);
+}
+ /* - statut de la commande - */
+.command_statut,
+.command_send{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.command_statut p,
+.command_send p{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
