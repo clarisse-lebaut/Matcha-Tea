@@ -59,24 +59,26 @@ img,
   border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
 }
 
-.card__content {
+.card__content,
+.card__btn {
   padding: 1em;
+}
+
+.card__title,
+.card__desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
 }
 
 .card__title {
   padding-block-end: 0.15em;
-  display: -webkit-box;
   -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow-y: hidden;
   font-size: 1.25rem;
 }
 
 .card__desc {
-  display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow-y: hidden;
 }
 
 .card__rate {
@@ -99,7 +101,6 @@ img,
 .card__btn {
   text-align: center;
   margin-top: 1em;
-  padding: 1em;
   background-color: var(--card-btn-bg);
   text-decoration: none;
   color: black;
