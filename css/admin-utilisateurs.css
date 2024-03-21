@@ -107,19 +107,82 @@ main {
 
 .users-table {
   width: 90%;
-  border: 1px solid hsl(0, 0%, 0%);
   margin-block: 4em;
   margin-inline: auto;
+  border-collapse: collapse;
+}
+
+.users-table__row {
+  border: 1px solid hsl(0, 0%, 87%);
+}
+
+.users-table__row:nth-child(even) {
+  background-color: hsl(0, 0%, 87%);
 }
 
 .users-table__head-col,
 .users-table__col {
-  padding-block: 1em;
-  border: 1px solid hsl(0, 0%, 0%);
+  text-align: left;
+  padding: 1em;
 }
 
-.users-table__col {
+.users-table__head-col:first-child,
+.users-table__col:first-child {
   text-align: center;
+}
+
+.users-table__col:last-child {
+  text-align: right;
+}
+
+.users-table__user {
+  display: flex;
+  align-items: center;
+}
+
+.users-table__col-img {
+  width: 50px;
+  float: left;
+  margin-right: 0.5em;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 98%);
+  border: 1px solid hsl(0, 0%, 90%);
+  padding: 0.5em;
+  border-radius: 0.2em;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: hsl(0, 0%, 96%);
+}
+
+.btn:active {
+  background-color: hsl(0, 0%, 97%);
+}
+
+.btn__img {
+  width: 30px;
+}
+
+.btn--danger {
+  background-color: hsl(3, 90%, 51%);
+  border: 1px solid hsl(3, 90%, 43%);
+}
+
+.btn--danger:hover,
+.btn--danger:focus {
+  background-color: hsl(3, 90%, 49%);
+}
+
+.btn--danger:active {
+  background-color: hsl(3, 90%, 50%);
 }
 
 /* Footer */
