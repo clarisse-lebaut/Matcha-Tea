@@ -247,24 +247,6 @@ nav ul {
   /* Centrer les éléments horizontalement */
 }
 
-nav li {
-  transform: rotate(-0.25turn);
-  /* Rotation des éléments de liste */
-  margin: 5px 0;
-  /* Ajustez les marges selon vos besoins */
-}
-
-nav a {
-  text-decoration: none;
-  color: black;
-  padding: 80% 0%;
-  /* Ajustez le remplissage selon vos besoins */
-  margin-bottom: 50%;
-  /* Ajoute une marge en bas pour espacer les éléments */
-  display: inline-block;
-  /* Pour que les liens puissent être dimensionnés correctement */
-}
-
 footer {
   background-color: red;
   display: flex;
@@ -273,6 +255,7 @@ footer {
   /* Pour espacer les éléments */
   padding: 0 5%;
   gap: 5%;
+  overflow: hidden;
 }
 
 .innerblock {

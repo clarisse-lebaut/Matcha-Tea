@@ -72,19 +72,19 @@
   display: block;
   text-align: center;
   margin-top: 1em;
-  background-color: var(--card-btn-bg);
+  background-color: hsl(120, 100%, 40%);
   text-decoration: none;
   color: black;
-  border-radius: var(--card-border-radius);
+  border-radius: 0.3125em;
 }
 
 .card__btn:hover,
 .card__btn:focus {
-  background-color: var(--card-btn-bg-hover-focus);
+  background-color: hsl(120, 100%, 38%);
 }
 
 .card__btn:active {
-  background-color: var(--card-btn-bg-active);
+  background-color: hsl(120, 100%, 39%);
 }
 
 /* ============================== REPONSE PART ============================== */
