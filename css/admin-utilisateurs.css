@@ -1,114 +1,13 @@
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/* Global */
-img {
-  display: block;
-  width: 100%;
-}
-
-.wrapper {
-  height: 100svh;
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  grid-template-rows: max-content 1fr max-content;
-  grid-template-areas:
-    'header header'
-    'navbar main'
-    'navbar footer';
-}
-
-.wrapper--admin {
-  grid-template-areas:
-    'navbar header'
-    'navbar main'
-    'navbar footer';
-}
-
-/* Header */
-header {
-  grid-area: header;
-  background-color: hsl(0, 0%, 95%);
-  display: flex;
-  align-items: center;
-  padding-inline: 2em;
-}
-
-.header__title {
-  font-size: 1.5rem;
-}
-
-.header--right {
-  margin-left: auto;
-}
-
-.account {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5em;
-  padding-inline: 1em;
-  padding-block: 1em;
-}
-
-.account__avatar {
-  width: 2em;
-}
-
-/* Navbar */
-.navbar,
-.navbar a {
-  color: white;
-}
-
-.navbar {
-  grid-area: navbar;
-  background-color: hsl(0, 0%, 33%);
-}
-
-.navbar__list-item {
-  height: 100%;
-  list-style: none;
-  overflow-y: auto;
-}
-
-.navbar__item {
-  height: fit-content;
-}
-
-.navbar__link {
-  display: block;
-  padding-inline: 2em;
-  padding-block: 1em;
-  min-width: 20em;
-  text-decoration: none;
-}
-
-.navbar__link:hover,
-.navbar__link:focus,
-.link--active {
-  background-color: hsl(240, 45%, 32%);
-}
-
-.navbar__link:active {
-  background-color: hsl(240, 45%, 33%);
-}
-
-/* Main */
+/* Main section */
 main {
   grid-area: main;
   overflow-y: auto;
 }
 
+/* Table of registered users */
 .users-table {
   width: 90%;
-  margin-block: 4em;
-  margin-inline: auto;
+  margin: 4em auto;
   border-collapse: collapse;
 }
 
@@ -183,19 +82,4 @@ main {
 
 .btn--danger:active {
   background-color: hsl(3, 90%, 50%);
-}
-
-/* Footer */
-footer {
-  grid-area: footer;
-  padding-block: 1em;
-  padding-inline: 2em;
-  background-color: hsl(0, 0%, 95%);
-  display: flex;
-  align-items: center;
-}
-
-.copyright {
-  font-size: 1.5rem;
-  padding-right: 0.25em;
 }
