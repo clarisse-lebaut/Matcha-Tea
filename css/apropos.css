@@ -1,21 +1,10 @@
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.wrapper {
+main {
   display: flex;
-}
-
-.wrapper--center {
   justify-content: center;
   align-items: center;
-  height: 100svh;
 }
 
+/* About card */
 .about {
   width: 90%;
   max-width: 1000px;
