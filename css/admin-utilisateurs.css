@@ -1,9 +1,3 @@
-/* Main section */
-main {
-  grid-area: main;
-  overflow-y: auto;
-}
-
 /* Table of registered users */
 .users-table {
   width: 90%;
