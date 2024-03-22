@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="stylesheet" href="../css/commandes.css" />
+    <title>Commandes</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <img src="image/matchaleft.jpeg" alt="Image 1" />
+        <img src="image/hibou.png" alt="Image 2" />
+      </header>
+      <nav class="sidebar">
+        <ul>
+          <li><a href="#">vente</a></li>
+          <li><a href="#">histoire</a></li>
+          <li><a href="#">a propos</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <main class="main command">
+        <!-- section titre -->
+        <section class="title">
+          <h1>
+            MES COMMANDES
+            <hr width="100%" size="4" color="black" />
+          </h1>
+        </section>
+        <!-- section recherche dans les commandes -->
+        <section class="search_command">
+          <div class="search_select">
+            <label for="see"> Voir </label>
+            <select id="see" name="See">
+              <option value="">--- Choisir une option ---</option>
+              <option value="Commandes">Commandes</option>
+              <option value="Précommandes">Précommandes</option>
+              <option value="Commandes archivées">Commandes archivées</option>
+              <option value="Commandes annulées">Commandes annulées</option>
+            </select>
+            <label for="when"> Périodes </label>
+            <select id="when" name="when">
+              <option value="">--- Choisir une option ---</option>
+              <option value="3 derniers mois">3 derniers mois</option>
+              <option value="6 derniers mois">6 derniers mois</option>
+              <option value="12 derniers mois">12 derniers mois</option>
+              <options value="2023">2023</options>
+            </select>
+          </div>
+          <div class="search_input">
+            <input
+              type="search"
+              id="site_search"
+              placeholder="Rechercher un produit dans les commandes"
+            />
+            <button>Rechercher</button>
+          </div>
+        </section>
+        <!-- section consultation des commandes passées -->
+        <section>
+          <article class="command_consult">
+            <div class="command_body">
+              <h2>commande n°xxx-xxx-xxx</h2>
+              <time>du xx/03/2024</time>
+              <p>Montant : xxx €</p>
+              <button id="download">
+                <img src="../images/svg/download.svg" /> facture
+              </button>
+            </div>
+
+            <div class="command_details">
+              <div class="command_picture">
+                <p>ARTICLES</p>
+                <div class="pic">
+                  <div class="pictures">
+                    <img src="https://picsum.photos/200/300" class="picture" />
+                  </div>
+                  <div class="pictures">
+                    <img src="https://picsum.photos/200/300" class="picture" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="command_statut">
+                <p>SUIVI DE COMMANDE</p>
+                <image src="../images/svg/sync.svg" alt="logo" class="logo">
+                  en traitement</image
+                >
+              </div>
+
+              <div class="command_send">
+                <p>SUIVI DE COLIS</p>
+                <image src="../images/svg/send.svg" alt="camion" class="logo">
+                  en préparation
+                </image>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="innerblock">
+          <p>Merci d'être passé !</p>
+        </div>
+        <div class="contact">
+          <h2>Coordonnées:</h2>
+          <p>Adresse : 123 Rue Principale, Ville, Pays</p>
+          <p>Téléphone : +123 456 7890</p>
+          <p>Email : info@example.com</p>
+        </div>
+        <div class="navigation">
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">histoire</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="#">Vente</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

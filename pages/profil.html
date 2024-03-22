@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="stylesheet" href="../css/profil.css" />
+    <title>Profil</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <img src="image/matchaleft.jpeg" alt="Image 1" />
+        <img src="image/hibou.png" alt="Image 2" />
+      </header>
+      <nav class="sidebar">
+        <nav class="sidebar">
+          <ul>
+            <li><a href="#">vente</a></li>
+            <li><a href="#">histoire</a></li>
+            <li><a href="#">a propos</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </nav>
+      <main class="main category">
+        <section class="title">
+          <div class="page_profil">
+            <h1>
+              MON PROFIL
+              <hr color="black" width="100%" />
+            </h1>
+          </div>
+        </section>
+
+        <nav id="navpage">
+          <li><a id="hoover1" href="#infos">INFORMATIONS</a></li>
+          <li><a id="hoover2" href="#mdp">CONNEXION</a></li>
+          <li><a id="hoover3" href="#coord">COORDONNEES</a></li>
+        </nav>
+        <nav id="for_mobil">
+          <li>
+            <a id="hooverA" href="#infos"
+              ><img id="logo" src="../images/svg/profil.svg"
+            /></a>
+          </li>
+          <li>
+            <a id="hooverB" href="#mdp"
+              ><img id="logo" src="../images/svg/key.svg"
+            /></a>
+          </li>
+          <li>
+            <a id="hooverC" href="#coord"
+              ><img id="logo" src="../images/svg/euro.svg"
+            /></a>
+          </li>
+        </nav>
+        <!-- Inforamtions générales = Nom, Prénom, Date de naissance-->
+        <article class="profil" id="infos">
+          <div class="general_info">
+            <h3>MES INFORMATIONS</h3>
+            <hr class="underscore" color="brown" width="40%" />
+            <p>
+              Vous pouvez modifier <br />
+              vos informations nominatives
+            </p>
+            <label for="Pseudo"> Pseudo</label>
+            <input input type="text" name="Pseudo" />
+            <label for="FirstName"> Prénom</label>
+            <input input type="text" name="FisrtName" />
+            <label for="LastName"> Nom</label>
+            <input input type="text" name="LastName" />
+            <label for="BornDate"> Date de naissance</label>
+            <input input type="date" name="BornDate" />
+            <button>Confirmer les modifications</button>
+          </div>
+        </article>
+        <hr class="separation" color="black" width="100%" heigt="50px" />
+        <!-- Mot de passe = Changer le mot de passe -->
+        <article class="profil" id="mdp">
+          <div class="password">
+            <h3>ME CONNECTER</h3>
+            <hr class="underscore" color="brown" width="40%" />
+            <p>
+              Vous pouvez modifier <br />
+              vos identifiants de connexion
+            </p>
+            <label for="e-mail"> E-mail</label>
+            <input
+              input
+              type="email"
+              name="e-mail"
+              placeholder="votreadresse@domaine.ext"
+            />
+            <label for="MDP"> Mot de passe</label>
+            <input input type="text" name="MDP" />
+            <button>Confirmer la modification</button>
+          </div>
+        </article>
+        <hr class="separation" color="black" width="100%" />
+        <!-- Coordonnées = Adresse e-mail, Téléphone, Adresse de facturation, Adressde de livraison, Moyen de paiements-->
+        <article class="profil" id="coord">
+          <div class="contact_details">
+            <h3>MES COORDONNEES</h3>
+            <hr class="underscore" color="brown" width="40%" />
+            <p>
+              Vous pouvez modifier vos informations <br />
+              de livraisons et de facturations
+            </p>
+            <label for="phone"> Nurméro de téléphone </label>
+            <input input type="tel" name="phone" pattern="[0-9]{10}" />
+            <label for="facturation"> Adresse de facturation</label>
+            <input input type="text" name="facturation" />
+            <label for="livraison"> Adresse de livraison</label>
+            <input input type="text" name="livraison" />
+            <label for="money"> Paiements</label>
+            <div class="payment">
+              <image src="../images/svg/creditcart.svg" class="credit"></image>
+              <image src="../images/svg/addcard.svg" class="credit"></image>
+            </div>
+            <button>Confirmer les modifications</button>
+          </div>
+        </article>
+      </main>
+      <footer class="footer">
+        <div class="innerblock">
+          <p>Merci d'être passé !</p>
+        </div>
+        <div class="contact">
+          <h2>Coordonnées:</h2>
+          <p>Adresse : 123 Rue Principale, Ville, Pays</p>
+          <p>Téléphone : +123 456 7890</p>
+          <p>Email : info@example.com</p>
+        </div>
+        <div class="navigation">
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">histoire</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="#">Vente</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
