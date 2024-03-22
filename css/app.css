@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=McLaren&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=McLaren&display=swap'); */
+
 /*
   Stylesheet for global design of the application.
 */
 
 :root {
-  --card-border-radius: 0.3125em;
-  --card-btn-bg: hsl(117, 70%, 42%);
-  --card-btn-bg-hover-focus: hsl(117, 70%, 40%);
-  --card-btn-bg-active: hsl(117, 70%, 41%);
+  --ff-courgette: "Courgette", sans-serif;
+  --ff-mclaren: "McLaren", sans-serif;
+  --fw-normal: 400;
+  --fw-bold:700;
 }
 
 *,
@@ -15,6 +20,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-mclaren);
+  font-weight: var(--fw-normal);
 }
 
 img {
@@ -38,12 +48,6 @@ img {
     'navbar header'
     'navbar main'
     'navbar footer';
-}
-
-/* Main section */
-main {
-  grid-area: main;
-  overflow-y: auto;
 }
 
 /* Header section */
@@ -76,41 +80,47 @@ header {
 }
 
 /* Sidebar section */
-.wrapper--admin .sidebar,
-.wrapper--admin .sidebar a {
+.sidebar,
+.sidebar a {
   color: white;
 }
 
-.wrapper--admin .sidebar {
+.sidebar {
   grid-area: navbar;
   background-color: hsl(0, 0%, 33%);
 }
 
-.wrapper--admin .sidebar__list-item {
+.sidebar__list-item {
   height: 100%;
   list-style: none;
   overflow-y: auto;
 }
 
-.wrapper--admin .sidebar__item {
+.sidebar__item {
   height: fit-content;
 }
 
-.wrapper--admin .sidebar__link {
+.sidebar__link {
   display: block;
   padding: 1em 2em;
   min-width: 20em;
   text-decoration: none;
 }
 
-.wrapper--admin .sidebar__link:hover,
-.wrapper--admin .sidebar__link:focus,
-.wrapper--admin .link--active {
+.sidebar__link:hover,
+.sidebar__link:focus,
+.link--active {
   background-color: hsl(240, 45%, 32%);
 }
 
-.wrapper--admin .sidebar__link:active {
+.sidebar__link:active {
   background-color: hsl(240, 45%, 33%);
+}
+
+/* Main section */
+main {
+  grid-area: main;
+  overflow-y: auto;
 }
 
 /* Footer */
@@ -205,4 +215,108 @@ footer {
   .account {
     margin: 0;
   }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  /* Pour répartir les images de manière équitable */
+  align-items: center;
+  /* Pour centrer verticalement les images */
+}
+
+header img {
+  width: 50px;
+  /* Largeur souhaitée */
+  height: auto;
+  /* Hauteur ajustée automatiquement pour préserver les proportions */
+}
+
+nav {
+  background-color: hsl(0, 0%, 95%);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* Définir la direction de la disposition flex en colonne */
+  align-items: center;
+  /* Centrer les éléments horizontalement */
+}
+
+nav li {
+  transform: rotate(-0.25turn);
+  /* Rotation des éléments de liste */
+  margin: 5px 0;
+  /* Ajustez les marges selon vos besoins */
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 80% 0%;
+  /* Ajustez le remplissage selon vos besoins */
+  margin-bottom: 50%;
+  /* Ajoute une marge en bas pour espacer les éléments */
+  display: inline-block;
+  /* Pour que les liens puissent être dimensionnés correctement */
+}
+
+footer {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Pour espacer les éléments */
+  padding: 0 5%;
+  gap: 5%;
+}
+
+.innerblock {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 2;
+  /* Pour placer au centre */
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-start;
+  /* Aligner à gauche */
+  align-items: flex-start;
+  /* Aligner les éléments verticalement au centre */
+  flex-direction: column;
+  width: 30%;
+  order: 3;
+  /* Pour placer à gauche */
+  flex-grow: 1;
+  /* Pour que cet élément prenne l'espace restant */
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+  /* Aligner à gauche */
+  align-items: center;
+  /* Aligner les éléments verticalement au centre */
+  width: 30%;
+  order: 1;
+  /* Pour placer à gauche */
+  flex-grow: 1;
+  /* Pour que cet élément prenne l'espace restant */
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  padding-left: 150px;
+  /* Ajoute un padding à gauche et à droite de chaque lien texte */
 }
