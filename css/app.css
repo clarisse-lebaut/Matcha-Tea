@@ -1,0 +1,208 @@
+/*
+  Stylesheet for global design of the application.
+*/
+
+:root {
+  --card-border-radius: 0.3125em;
+  --card-btn-bg: hsl(117, 70%, 42%);
+  --card-btn-bg-hover-focus: hsl(117, 70%, 40%);
+  --card-btn-bg-active: hsl(117, 70%, 41%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.wrapper {
+  height: 100svh;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: max-content 1fr max-content;
+  grid-template-areas:
+    'header header'
+    'navbar main'
+    'navbar footer';
+}
+
+.wrapper--admin {
+  grid-template-areas:
+    'navbar header'
+    'navbar main'
+    'navbar footer';
+}
+
+/* Main section */
+main {
+  grid-area: main;
+  overflow-y: auto;
+}
+
+/* Header section */
+header {
+  grid-area: header;
+  background-color: hsl(0, 0%, 95%);
+  display: flex;
+  align-items: center;
+  padding-inline: 2em;
+}
+
+.header__title {
+  font-size: 1.5rem;
+}
+
+.header--right {
+  margin-left: auto;
+}
+
+.account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1em;
+}
+
+.account__avatar {
+  width: 2em;
+}
+
+/* Sidebar section */
+.wrapper--admin .sidebar,
+.sidebar a {
+  color: white;
+}
+
+.wrapper--admin .sidebar {
+  grid-area: navbar;
+  background-color: hsl(0, 0%, 33%);
+}
+
+.wrapper--admin .sidebar__list-item {
+  height: 100%;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.wrapper--admin .sidebar__item {
+  height: fit-content;
+}
+
+.wrapper--admin .sidebar__link {
+  display: block;
+  padding: 1em 2em;
+  min-width: 20em;
+  text-decoration: none;
+}
+
+.wrapper--admin .sidebar__link:hover,
+.wrapper--admin .sidebar__link:focus,
+.wrapper--admin .link--active {
+  background-color: hsl(240, 45%, 32%);
+}
+
+.wrapper--admin .sidebar__link:active {
+  background-color: hsl(240, 45%, 33%);
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  padding: 1em 2em;
+  background-color: hsl(0, 0%, 95%);
+  display: flex;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 1.5rem;
+  padding-right: 0.25em;
+}
+
+@media screen and (max-width: 1400px) {
+  .wrapper {
+    height: auto;
+  }
+
+  .wrapper--admin {
+    grid-template-rows: max-content max-content 1fr max-content;
+    grid-template-areas:
+      'header header'
+      'navbar navbar'
+      'main main'
+      'footer footer';
+  }
+
+  .sidebar__list-item {
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar__link {
+    min-width: 0;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .users-table {
+    margin: 2em auto;
+  }
+
+  .users-table__head-col {
+    display: none;
+  }
+
+  .users-table__col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.25em;
+  }
+
+  .users-table__col:last-child {
+    flex-direction: row;
+  }
+
+  .users-table__user {
+    flex-direction: column;
+  }
+
+  .users-table__col-img {
+    padding-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar__list-item {
+    flex-direction: column;
+  }
+
+  .sidebar__link {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header__title {
+    padding: 0.5em 0;
+  }
+
+  .account {
+    margin: 0;
+  }
+}

@@ -1,22 +1,11 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: hsl(182, 14%, 61%);
-}
-
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100svh;
+  background-color: hsl(182, 14%, 61%);
 }
 
+/* Contact form */
 .contact,
 .contact__wrapper,
 .contact__form {
@@ -89,6 +78,7 @@ textarea.contact__input {
   border: 0.0625em solid hsl(29, 18%, 59%);
 }
 
+/* Responsive part */
 @media screen and (max-width: 762px) {
   .contact__wrapper {
     flex-direction: column;
