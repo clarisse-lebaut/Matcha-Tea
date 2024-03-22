@@ -2,6 +2,13 @@
   Stylesheet for global design of the application.
 */
 
+:root {
+  --card-border-radius: 0.3125em;
+  --card-btn-bg: hsl(117, 70%, 42%);
+  --card-btn-bg-hover-focus: hsl(117, 70%, 40%);
+  --card-btn-bg-active: hsl(117, 70%, 41%);
+}
+
 *,
 *::before,
 *::after {
@@ -31,6 +38,12 @@ img {
     'navbar header'
     'navbar main'
     'navbar footer';
+}
+
+/* Main section */
+main {
+  grid-area: main;
+  overflow-y: auto;
 }
 
 /* Header section */
@@ -98,12 +111,6 @@ header {
 
 .wrapper--admin .sidebar__link:active {
   background-color: hsl(240, 45%, 33%);
-}
-
-/* Main section */
-main {
-  grid-area: main;
-  overflow-y: auto;
 }
 
 /* Footer */
