@@ -1,0 +1,93 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(182, 14%, 61%);
+}
+
+/* Contact form */
+.contact,
+.contact__wrapper,
+.contact__form {
+  display: flex;
+}
+
+.contact,
+.contact__form {
+  flex-direction: column;
+}
+
+.contact {
+  color: hsl(29, 18%, 59%);
+  width: 90%;
+  max-width: 1100px;
+  background-color: hsl(57, 49%, 91%);
+  padding: 1.5em;
+}
+
+.contact__title {
+  text-align: center;
+  width: 100%;
+  padding-block: 1.375em;
+}
+
+.contact__desc,
+.contact__form {
+  width: 50%;
+  padding: 1.75em;
+}
+
+hr.contact__seperator {
+  border: none;
+  width: 0.0625em;
+  background-color: hsl(29, 18%, 59%);
+}
+
+.contact__form {
+  gap: 1em;
+}
+
+.contact__input {
+  padding: 0.625em;
+  background-color: transparent;
+  border: none;
+  color: hsl(29, 18%, 59%);
+  border-bottom: 0.0625em solid hsl(29, 18%, 59%);
+}
+
+textarea.contact__input {
+  resize: none;
+}
+
+.contact__btn {
+  color: hsl(29, 18%, 59%);
+  background-color: transparent;
+  border: 0.0625em solid hsl(29, 18%, 59%);
+  width: fit-content;
+  margin-inline: auto;
+  padding-block: 1em;
+  padding-inline: 1.5em;
+  transition: 150ms ease;
+}
+
+.contact__btn:hover,
+.contact__btn:focus {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(29, 18%, 59%);
+  border: 0.0625em solid hsl(29, 18%, 59%);
+}
+
+/* Responsive part */
+@media screen and (max-width: 762px) {
+  .contact__wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact__desc,
+  .contact__form {
+    width: 100%;
+  }
+}
