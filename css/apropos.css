@@ -10,6 +10,7 @@ main {
   max-width: 1000px;
   padding: 2em;
   border-radius: 0.3125em;
+  background-color: bisque;
 }
 
 .about__title {
