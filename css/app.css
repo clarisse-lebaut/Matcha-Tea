@@ -63,40 +63,40 @@ header {
 }
 
 /* Sidebar section */
-.sidebar,
-.sidebar a {
+.wrapper--admin .sidebar,
+.wrapper--admin .sidebar a {
   color: white;
 }
 
-.sidebar {
+.wrapper--admin .sidebar {
   grid-area: navbar;
   background-color: hsl(0, 0%, 33%);
 }
 
-.sidebar__list-item {
+.wrapper--admin .sidebar__list-item {
   height: 100%;
   list-style: none;
   overflow-y: auto;
 }
 
-.sidebar__item {
+.wrapper--admin .sidebar__item {
   height: fit-content;
 }
 
-.sidebar__link {
+.wrapper--admin .sidebar__link {
   display: block;
   padding: 1em 2em;
   min-width: 20em;
   text-decoration: none;
 }
 
-.sidebar__link:hover,
-.sidebar__link:focus,
-.link--active {
+.wrapper--admin .sidebar__link:hover,
+.wrapper--admin .sidebar__link:focus,
+.wrapper--admin .link--active {
   background-color: hsl(240, 45%, 32%);
 }
 
-.sidebar__link:active {
+.wrapper--admin .sidebar__link:active {
   background-color: hsl(240, 45%, 33%);
 }
 
