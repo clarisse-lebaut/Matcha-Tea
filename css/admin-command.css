@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     height :100vsh;
     display: grid;
     grid-template-columns: fit-content 1fr;
@@ -9,120 +9,190 @@
         'navbar footer';
 }
 
-.wrapper--admin{
+.wrapper--admin {
     grid-template-areas: 
         'navbar header'
         'navbar main'
         'navbar footer';
 }
 
-/* --- main part -- */
+/* --- all element : */
+/* in display flex and flex-wrap --- */
+.search,
+.details,
+.box1,
+.graph,
+.dashboard_category,
+.filter,
+.filter_choice,
+.filter p,
+.tr,
+.th,
+.td{
+    display: flex;
+    flex-wrap: wrap;
+}
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
+/* in center --- */
+button,
+.box1,
+.filter_choice{
+    text-align: center;
+}
+
+.details,
+.box1,
+.dashboard_category,
+.command_board_explicit,
+.filter_choice,
+.filter p{
+    justify-content: center;
+}
+
+/* in aliceblue --- */
+.command_board_explicit,
+.filter_choice,
+.box1,
+.graph {
+    background-color: aliceblue;
+}
+
+/* with hover --- */
+.box1:hover,
+.filter_choice:hover{
+    background-color: rgb(157, 187, 214);
+    transition: 0.7s;
+}
+
+.box1:hover{
+    transform: translateY(0%);
+    -webkit-transform: scale(1.2);
+    transform: scale(0.1s);
+}
+
+.box1:hover::after{
+    height: 0;
+}
+
+/* --- main part -- */
+body {
     list-style-type: none;
     margin: 0;
 }
 
-.title{
-    margin: 5px 5px 5px 5px;
-}
-
 .search {
-    display: flex;
     justify-content: flex-end;
     padding: 1%;
     gap: 10px;
-
 }
 
-input{
+input {
     height: 40px;
     width: 50%;
 }
 
-.button{
-    text-align: center;
-}
-
-.details{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+/* --- few cards of details for sales -- */
+/* -- main container -- */
+.details {
+    flex-direction: row;
+    flex-grow: 1;
     gap: 10px;
     margin:3%;
 }
 
-.img{
+.img {
     width: 20%;
 }
 
-.box1{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+/* -- child = 4 cards -- */
+.box1 {
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     box-sizing: border-box;
-    width: 100%;
-    background-color: aliceblue;
-    text-align: center;
     border-radius: 20px;
     gap:20px;
     padding:50px;
     border: dashed black 1px;
 }
 
-.dashboard_category{
-    display: flex;
+/* - cards with a sale graphical for a year - */
+.graph {
+    width: 300px;
+    height: 150px;
+    align-items: flex-end;
+}
+
+.bar {
+    flex-grow: 1;
+    background-color: blue;
+    border: 1px solid purple;
+    margin: 5px;
+}
+
+.bar1 {height: 40%;}
+.bar2 {height: 20%;}
+.bar3 {height: 80%;}
+.bar4 {height: 60%;}
+.bar5 {height: 80%;}
+.bar6 {height: 40%;}
+.bar7 {height: 40%;}
+.bar8 {height: 20%;}
+.bar9 {height: 80%;}
+.bar9 {height: 60%;}
+.bar10 {height: 80%;}
+.bar11 {height: 40%;}
+.bar12 {height: 40%;}
+
+/* -- board with sales details -- */
+.dashboard_category {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-.board_head{
+.board_head,
+.board_inside {
     padding:150px
 }
 
-.board_inside{
-    padding:150px;
-}
-
-.filter{
-    display: flex;
+.filter {
     flex-direction: row;
     justify-content: space-between;
-    gap:25px;
+    gap:15px;
     border-radius: 5px;
     width: 90%;
     border: solid black 1px;
-    padding: 10px;
+    padding: 5px;
 }
 
-.filter_choice{
+.filter_choice {
     align-content: center;
     border-radius: 5px;
-    background-color: aliceblue;
     padding: 10px;
-    width: 30%;
-    text-align: center;
+    width: 10%;
 }
 
-.command_board_explicit{
-    background-color: aliceblue;
-    display: flex;
+.filter p{
+    align-items: center;
+}
+
+/* -- board with details -- */
+.command_board_explicit {
     flex-direction: row;
-    justify-content: center;
     border-radius: 5px;
     border:solid black 1px;
     width: 90%;
     border-collapse: separate;
+    align-content: center;
+}
+
+table {
+    display: flex;
+    justify-content: space-around;
 }
 
 tr,
 th,
-td{
+td {
     padding: 10px 50px 10px 50px;
 }
-

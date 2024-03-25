@@ -5,12 +5,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* -- permet de retirer les bords et mettre les éléments dans l'epace contenant l'ensemble de la page HTML -- */
 
 .wrapper {
     height: 100svh;
     display: grid;
     grid-template-columns: max-content 1fr;
-    /* remplace le fit-content par un max-content */
     grid-template-rows: max-content 1fr max-content;
     grid-template-areas:
         'header header'
@@ -47,7 +47,7 @@ h3 {
     /* --- warning : jeremy retired it --- */
 }
 
-/* --- version téléphone --- */
+/* --- mobil --- */
  @media screen and (max-width : 426px) {
     body {
         display: flex;
@@ -60,6 +60,7 @@ h3 {
         gap: 10px;
     }
 
+    /* -- on retire cette barre de navigation pour laisser place à celle de la version mobile -- */
     #navpage {
         display: none;
     }
@@ -80,8 +81,10 @@ h3 {
     }
 
     #logo {
-        width: 30px;
-        height: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
     }
 
     #logo:hover {
@@ -146,6 +149,7 @@ h3 {
         font-size: 15px;
     }
 
+    /* -- espace changement et ajout moyens de paiements -- */
     .payment {
         display: flex;
         flex-direction: row;
@@ -162,7 +166,7 @@ h3 {
 
 }
 
-/* --- version tablette --- */
+/* --- tablet--- */
 @media screen and (min-width : 426px) and (max-width : 1070px) {
     .title {
         display: flex;
@@ -174,6 +178,7 @@ h3 {
         padding: 5px 5px 5px 5px;
     }
 
+    /* -- on retire la barre de navigation mobile pour laisser pllace à celle de l'oridnateur et de la tablette -- */
     #for_mobil {
         display: none;
     }
@@ -311,7 +316,7 @@ h3 {
 
 }
 
-/* --- version ordinateur --- */
+/* --- laptop --- */
 @media screen and (min-width : 1070px) {
     .title {
         display: flex;

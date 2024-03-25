@@ -7,7 +7,6 @@
 }
 
 /* --- instructions communes à tous les formats --- */
-
 .wrapper{
     height : 100svh;
     display: grid;
@@ -18,7 +17,7 @@
         'header header' 
         'navbar main' 
         'navbar footer';
-    /* --- pattern : permet de donner un ordre dans lequel on pourra aooeker les éléments par la suite --- */
+    /* --- pattern : permet de donner un ordre dans lequel on pourra appeler les éléments par la suite --- */
 }
 
 .header {
@@ -42,7 +41,7 @@
     height: 15svh;
 }
 
-/* --- mobile version --- */
+/* --- mobile --- */
 @media screen and (max-width : 426px) {
 
     /* -- titre de la page -- */
@@ -179,7 +178,7 @@
     }
 }
 
-/* --- tablet and laptop version -- */
+/* --- tablet and laptop -- */
 @media screen and (min-width : 426px) {
     /* -- titre de la page -- */
     .title {

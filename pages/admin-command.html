@@ -9,25 +9,35 @@
   </head>
   <body>
     <div class="wrapper wrapper--admin">
-      <header class="header">
-        <img src="image/matchaleft.jpeg" alt="Image 1" />
-        <img src="image/hibou.png" alt="Image 2" />
+      <header>
+        <h1 class="header__title">Commandes</h1>
+        <div class="account header--right">
+          <img
+            class="account__avatar"
+            src="../images/svg/avatar.svg"
+            alt="Logo d'avatar de compte"
+          />
+          <span class="account__name">Nom d'utilisateur</span>
+        </div>
       </header>
       <nav class="sidebar">
-        <nav class="sidebar">
-          <ul>
-            <li><a href="#">vente</a></li>
-            <li><a href="#">histoire</a></li>
-            <li><a href="#">a propos</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
+        <ul class="sidebar__list-item">
+          <li class="sidebar_item">
+            <a
+              href="./admin-utilisateurs.html"
+              class="sidebar__link link--active"
+              >Utilisateurs</a
+            >
+          </li>
+          <li class="sidebar_item">
+            <a href="./admin-command.html" class="sidebar__link">Commandes</a>
+          </li>
+          <li class="navbar_item">
+            <a href="#" class="sidebar__link">Produits</a>
+          </li>
+        </ul>
       </nav>
       <main class="main">
-        <section class="title">
-          <h1>COMMANDES</h1>
-        </section>
-
         <div class="search">
           <input placeholder="Rechercher dans les commandes..." />
           <button>Rechercher</button>
@@ -47,7 +57,21 @@
             <p>+3 Fournisseurs</p>
           </div>
           <div class="box1">
-            <p>Graphique</p>
+            <p>VENTES SUR L'ANNEE</p>
+            <div class="graph">
+              <div class="bar bar1"></div>
+              <div class="bar bar2"></div>
+              <div class="bar bar3"></div>
+              <div class="bar bar4"></div>
+              <div class="bar bar5"></div>
+              <div class="bar bar6"></div>
+              <dic class="bar bar7"></dic>
+              <dic class="bar bar8"></dic>
+              <dic class="bar bar9"></dic>
+              <dic class="bar bar10"></dic>
+              <dic class="bar bar11"></dic>
+              <dic class="bar bar12"></dic>
+            </div>
           </div>
         </section>
 
@@ -134,18 +158,18 @@
           <p>Merci d'être passé !</p>
         </div>
         <div class="contact">
-          <h2>Coordonnées:</h2>
+          <h2>Coordonnées</h2>
           <p>Adresse : 123 Rue Principale, Ville, Pays</p>
           <p>Téléphone : +123 456 7890</p>
           <p>Email : info@example.com</p>
         </div>
         <div class="navigation">
           <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">histoire</a></li>
-            <li><a href="#">A propos</a></li>
-            <li><a href="#">Vente</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="./histoire.html">Histoire</a></li>
+            <li><a href="./apropos.html">A propos</a></li>
+            <li><a href="./vente.html">Vente</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
         </div>
       </footer>
